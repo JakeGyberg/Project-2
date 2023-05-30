@@ -60,6 +60,8 @@ public class MemoryGameGUI extends JFrame
       gameButtons[i] = new JButton();
       gameButtons[i].setPreferredSize(new Dimension(100,100));
       gameButtons[i].setBackground(Color.GRAY);
+
+      //ADDED change font
       gameButtons[i].setFont(new Font("SERIF", 1, 40));
 
       panel1.add(gameButtons[i]);
@@ -118,6 +120,7 @@ public class MemoryGameGUI extends JFrame
       } catch (InterruptedException ie) { /* do nothing */ }
 
       // change button color and show the memory string
+      //ADDED random color backgrounds
       gameButtons[buttonNum].setBackground(new Color((int) (Math.random() * 100) + 100, (int) (Math.random() * 100) + 100, (int) (Math.random() * 100) + 100));
       gameButtons[buttonNum].setText(sequence[i]);
 
@@ -167,6 +170,7 @@ public class MemoryGameGUI extends JFrame
    */
   public void showScore(int score, int rounds, double difficulty)
   {
+    //ADDED difficulty message
     JOptionPane.showMessageDialog(this, "You scored " + score + " out of " + rounds + ". Difficulty is " + difficulty, "Score Summary", JOptionPane.PLAIN_MESSAGE);
   }
   
